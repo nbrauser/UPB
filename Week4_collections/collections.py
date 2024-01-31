@@ -202,3 +202,9 @@ employee_details = [
     'skills': ['java', 'SQL', 'PHP']
 },
 ]
+
+
+### LIst and tuple to a set####
+list2 = [343, 3, 5, 8, 10, 3]
+set2 = set(list2)
+print(set2)
