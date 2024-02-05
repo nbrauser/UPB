@@ -63,7 +63,7 @@ elif grade < 100:
         print("A+")
 else:
     print("Please use a correct percentage")
-'''
+
 
 number = int(input('Type a number from 0-9: '))
 words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
@@ -71,6 +71,6 @@ if 0 <= number <= 9:
     print(words[number])
 else:
     print("Please use numbers in the criteria")
-
+'''
 
 
