@@ -13,42 +13,45 @@ else:  # In case they put in a value that is not in the correct range
 # rand_num = round(random.random(), 2)  # generates a random value between 0 and 1
 # print(round(rand_num,2))
 
-user_move = input('Pick either rock, paper, or scissors by typing r, p, or s: ')
-# prompts the user to pick either rock, paper, or scissors
-rand_num = round(random.random(), 2)  # generates a random value between 0 and 1
 comp_move = ''
+user_choice = 'yes'
 
-if 0 <= rand_num < 1/3:
-    comp_move = "r"  # if the random number is less than 1/3 the computer will play rock
-elif 1/3 <= rand_num < 2/3:
-    comp_move = "p"  # if the random number is inbetween 1/3 and 2/3 the computer will play paper
-else:
-    comp_move = 's'  # if the random number is greater than 2/3 and less than one it will play scissors
-
-result = ''
-
-if user_move == comp_move:
-    result = 'Tie.'
-elif user_move == 'r':
-    if comp_move == 'p':
-        result = 'You Lose!'
+while user_choice.lower() == 'yes':
+    user_move = input('Pick either rock, paper, or scissors by typing r, p, or s: ')
+    # prompts the user to pick either rock, paper, or scissors
+    rand_num = round(random.random(), 2)  # generates a random value between 0 and 1
+    if 0 <= rand_num < 1/3:
+        comp_move = "r"  # if the random number is less than 1/3 the computer will play rock
+    elif 1/3 <= rand_num < 2/3:
+        comp_move = "p"  # if the random number is inbetween 1/3 and 2/3 the computer will play paper
     else:
-        result = 'You Win!'
-elif user_move == 'p':
-    if comp_move == 's':
-        result = 'You Lose!'
-    else:
-        result = 'You Win!'
-elif user_move == 's':
-    if comp_move == 'r':
-        result = 'You Lose!'
-    else:
-        result = 'You Win!'
-else:
-    result = 'Please type correct character using lowercase'
-print(f'Computer did {comp_move}')
-print(result)
+        comp_move = 's'  # if the random number is greater than 2/3 and less than one it will play scissors
 
+    result = ''
+
+    if user_move == comp_move:
+        result = 'Tie.'
+    elif user_move == 'r':
+        if comp_move == 'p':
+            result = 'You Lose!'
+        else:
+            result = 'You Win!'
+    elif user_move == 'p':
+        if comp_move == 's':
+            result = 'You Lose!'
+        else:
+            result = 'You Win!'
+    elif user_move == 's':
+        if comp_move == 'r':
+            result = 'You Lose!'
+        else:
+            result = 'You Win!'
+    else:
+        result = 'Please type correct character using lowercase'
+    print(f'Computer did {comp_move}')
+    print(result)
+    user_choice = input("type yes to keep playing if not type no. ")
+'''
 # Rock
 print("""
     _______
@@ -78,7 +81,7 @@ print("""
       (____)
 ---.__(___)
 """)
-
+'''
 year = float(input('Please type a year: '))
 result = ''
 if year % 4 == 0:
