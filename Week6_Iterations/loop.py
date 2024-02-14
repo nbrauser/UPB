@@ -1,3 +1,4 @@
+import random
 '''
 x = 1
 
@@ -58,7 +59,7 @@ for i in range(1, rows+1):
     for j in range(1, i+1):
         print(j, end=' ')
     print()
-'''
+
 n = int(input('Type a number: '))
 i = 1
 while i <= n:
@@ -77,3 +78,41 @@ while i <= n:
         continue
     print(i)
     i += 1
+
+letters = list('abcdefghijklmnopqrstuvwxyz')
+numbers = list('0123456789')
+symbols = list('!@#$%^&*()')
+
+num_letters = int(input('How many letters do you want? '))
+num_numbers = int(input('How many numbers do you want? '))
+num_symbols = int(input('How many symbols do you want? '))
+
+password_list = []
+
+for letter in range(0, num_letters):
+    password_list.append(random.choice(letters))
+
+for num in range(0, num_numbers):
+    password_list.append(random.choice(numbers))
+
+for symbols in range(0, num_symbols):
+    password_list.append(random.choice(symbols))
+
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+password = ''.join(password_list)
+print(password)
+'''
+
+rows = int(input('Enter the number of rows: '))
+for i in range(1, rows+1):
+    for j in range(1, i+1):
+        print(j, end=' ')
+    print()
+
+for i in range(0, rows):
+    for j in range(rows-i, 0, -1):
+        print(j, end=' ')
+    print()
