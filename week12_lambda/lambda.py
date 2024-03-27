@@ -27,7 +27,7 @@ print(add_nums(2, 3))
 # Higher order functions --> filter, map, reduce
 nums = [3, 4, 6, 8, 4, 6, 2, 9]
 
-# Map
+# Filter
 def is_even(n):
     return n % 2 == 0
 
