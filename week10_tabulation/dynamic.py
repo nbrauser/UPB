@@ -67,7 +67,7 @@ def fib_ser(num_fib_terms):
     else:
         fib_list = [1, 1]
         for i in range (2, num_fib_terms):
-            fib_list.append(fib_list[i-a] + fib_list[i - 2])
+            fib_list.append(fib_list[i-1] + fib_list[i - 2])
         return fib_list
 
 
