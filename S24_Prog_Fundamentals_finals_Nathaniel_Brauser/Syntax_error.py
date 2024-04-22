@@ -1,28 +1,28 @@
 from functools import reduce
 # 24
-number = 250
+number = 250  # define the variable then give it a value
 while number <= 1000:
-    if number >= 750:
+    if number >= 750: # add a colan after the if statement and organize it as greater than equal to no =>
         print(number)
         number = number+100
-    else:
+    else:  # add colan
         print(number*2)
-    number = number + 50
+    number = number + 50  # add indent so is still inside while loop
 
 # 25
-val = 25
-for i in range(0,val):
+val = 25  # define variable before giving it value
+for i in range(0,val): # do not need "the" and add colan after for statement
     if i%2 ==0:
         print(i+1)
     else:
-        print(i-1)
+        print(i-1) # indent back one and add parenthesis
 
 # 26
 weather = 'raining'
-if weather == 'sunny':
-    print('wear sunblock')
-elif weather == 'snow':
-    print('going skiing')
+if weather == 'sunny':  # add extra equals to not assign a value but compare them
+    print('wear sunblock')  # add indent
+elif weather == 'snow':  # add extra equals to not assign a value but compare them
+    print('going skiing')  # add indent
 else:
     print(weather)
 
